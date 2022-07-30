@@ -17,6 +17,10 @@ public class ListNode {
                 ", next=" + next +
                 '}';
     }
+    public static String toStringAndRemoveHead(ListNode listNode) {
+          listNode=listNode.next;
+        return listNode.toString();
+    }
 
     public static ListNode create(int num){
         ListNode head = new ListNode();
@@ -39,5 +43,13 @@ public class ListNode {
             h=listNode;
         }
         return head;
+    }
+    public static int length(ListNode head){
+          int len = 0;
+          while (head.next!=null){
+             head=head.next;
+             len++;
+          }
+        return len;
     }
 }
