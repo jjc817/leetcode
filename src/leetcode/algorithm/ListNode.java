@@ -34,7 +34,7 @@ public class ListNode {
         }
         return head;
     }
-    public static ListNode createList(int[] list){
+    public static ListNode createByList(int[] list){
         ListNode head = new ListNode();
         ListNode h = head;
         for (int i = 0; i < list.length; i++) {

@@ -2,7 +2,7 @@ package leetcode.algorithm;
 
 public class RotateRight61 {
     public static void main(String[] args) {
-        ListNode listNode = ListNode.createList(new int[]{0,1,2});
+        ListNode listNode = ListNode.createByList(new int[]{0,1,2});
         ListNode node = MySolution.rotateRight(listNode, 4);
         System.out.println(ListNode.toStringAndRemoveHead(node));
     }
