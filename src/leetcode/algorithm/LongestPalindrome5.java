@@ -24,18 +24,18 @@ public class LongestPalindrome5 {
             while (n<=s.length()){
                 for (int i = 0; i < s.length() - 1; i++) {
                     int j = i+n-1;
-                    if(j>=s.length()){
+                    if(j >= s.length()){
                         break;
                     }
-                    if(s.charAt(i)==s.charAt(j)){
-                        if(j-i<3){
+                    if(s.charAt(i) == s.charAt(j)){
+                        if(j-i < 3){
                             dp[i][j] = true;
                         }else {
                             dp[i][j] = dp[i+1][j-1];
                         }
-                        if(dp[i][j] && j-i+1>max){
-                            max=j-i+1;
-                            begin=i;
+                        if(dp[i][j] && j-i+1 > max){
+                            max = j-i+1;
+                            begin = i;
                         }
                     }else {
                         dp[i][j] =false;
