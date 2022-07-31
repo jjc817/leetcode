@@ -1,8 +1,12 @@
 package leetcode.algorithm;
 
+import java.time.LocalTime;
+
 public class UniquePathsWithObstacles63 {
     public static void main(String[] args) {
+        System.out.println(LocalTime.now());
         System.out.println(MySolution.uniquePathsWithObstacles(new int[][]{{0, 0, 0}, {0, 1, 0}, {0, 0, 0}}));
+        System.out.println(LocalTime.now());
     }
     static class MySolution {
         public static int uniquePathsWithObstacles(int[][] obstacleGrid) {

@@ -1,11 +1,15 @@
 package leetcode.algorithm;
 
+import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class LongestPalindrome5 {
     public static void main(String[] args) {
-        String s = MySolution.longestPalindrome("dasdaswddasdqwerabccbaqweqwsadasdasd");
+        System.out.println(LocalTime.now());
+        String s = MySolution.longestPalindrome("wwwwwddasdqwerabccbaqweqwsadasdasd");
+        System.out.println(LocalTime.now());
         System.out.println(s);
     }
     static class MySolution{
