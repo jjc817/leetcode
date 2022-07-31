@@ -8,7 +8,7 @@ import java.util.List;
 public class LongestPalindrome5 {
     public static void main(String[] args) {
         System.out.println(LocalTime.now());
-        String s = MySolution.longestPalindrome("wwwwwddasdqwerabccbaqweqwsadasdasd");
+        String s = MySolution.longestPalindrome("wwwwddasdqwerabccbaqweqwsadasdasd");
         System.out.println(LocalTime.now());
         System.out.println(s);
     }
