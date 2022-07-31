@@ -6,7 +6,7 @@ import java.util.LinkedList;
 
 public class LongestValidParentheses32 {
     public static void main(String[] args) {
-        System.out.println(MySolution.longestValidParentheses(")()())))))))))(((((()))))))"));
+        System.out.println(MySolution.longestValidParentheses(")()()))))))))(((((()))))))"));
     }
     static class MySolution {
         public static int longestValidParentheses(String s) {
