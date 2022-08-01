@@ -3,10 +3,52 @@ package leetcode.algorithm;
 public class RotateRight61 {
     public static void main(String[] args) {
         ListNode listNode = ListNode.createByList(new int[]{0,1,2});
-        ListNode node = MySolution.rotateRight(listNode, 4);
+        ListNode node = MySolution.rotateRight(listNode, 2);
         System.out.println(ListNode.toStringAndRemoveHead(node));
     }
     static class MySolution {
+        public static ListNode rotateRight(ListNode head, int k) {
+            int length = ListNode.length(head);
+            final int n = k % length;
+            for (int i = 0; i < n; i++) {
+                ListNode end = head.next;
+                ListNode p = head;
+                while (end.next!=null){
+                    end=end.next;
+                    p=p.next;
+                }
+                end.next=head.next;
+                p.next=null;
+                head.next=end;
+            }
+            return head;
+        }
+    }
+    class Solution {
+        public ListNode rotateRight(ListNode head, int k) {
+            if (k == 0 || head == null || head.next == null) {
+                return head;
+            }
+            int n = 1;
+            ListNode iter = head;
+            while (iter.next != null) {
+                iter = iter.next;
+                n++;
+            }
+            int add = n - k % n;
+            if (add == n) {
+                return head;
+            }
+            iter.next = head;
+            while (add-- > 0) {
+                iter = iter.next;
+            }
+            ListNode ret = iter.next;
+            iter.next = null;
+            return ret;
+        }
+    }
+    static class S {
         public static ListNode rotateRight(ListNode head, int k) {
             int length = ListNode.length(head);
             final int n = k % length;
@@ -33,31 +75,5 @@ public class RotateRight61 {
             }
             return head;
         }
-        class Solution {
-            public ListNode rotateRight(ListNode head, int k) {
-                if (k == 0 || head == null || head.next == null) {
-                    return head;
-                }
-                int n = 1;
-                ListNode iter = head;
-                while (iter.next != null) {
-                    iter = iter.next;
-                    n++;
-                }
-                int add = n - k % n;
-                if (add == n) {
-                    return head;
-                }
-                iter.next = head;
-                while (add-- > 0) {
-                    iter = iter.next;
-                }
-                ListNode ret = iter.next;
-                iter.next = null;
-                return ret;
-            }
-        }
-
-
     }
 }

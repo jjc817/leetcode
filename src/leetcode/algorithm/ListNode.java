@@ -35,7 +35,7 @@ public class ListNode {
         return head;
     }
     public static ListNode createByList(int[] list){
-        ListNode head = new ListNode();
+        ListNode head = new ListNode(-99999);
         ListNode h = head;
         for (int i = 0; i < list.length; i++) {
             ListNode listNode =new ListNode(list[i]);
@@ -44,12 +44,50 @@ public class ListNode {
         }
         return head;
     }
+    public static ListNode createByListWithoutHead(int[] list){
+        ListNode head = new ListNode(list[0]);
+        ListNode h = head;
+        for (int i = 1; i < list.length; i++) {
+            ListNode listNode =new ListNode(list[i]);
+            h.next = listNode;
+            h=listNode;
+        }
+        return head;
+    }
     public static int length(ListNode head){
+          if(head == null){
+              return 0;
+          }
           int len = 0;
+          if(head.val != -99999)
+              len++;
           while (head.next!=null){
              head=head.next;
              len++;
           }
         return len;
+    }
+
+    public static ListNode prev(ListNode head,ListNode target){
+
+        while (head.next!=null){
+            if(head.next==target){
+                return head;
+            }
+            head=head.next;
+
+        }
+        return null;
+    }
+    public static ListNode[] myReverse(ListNode head, ListNode tail) {
+        ListNode prev = tail.next;
+        ListNode p = head;
+        while (prev != tail) {
+            ListNode nex = p.next;
+            p.next = prev;
+            prev = p;
+            p = nex;
+        }
+        return new ListNode[]{tail, head};
     }
 }
