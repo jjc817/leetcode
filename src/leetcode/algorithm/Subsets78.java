@@ -9,19 +9,20 @@ public class Subsets78 {
     }
     static class MySolution {
         static List<List<Integer>> res = new ArrayList<>();
+        static List<Integer> path = new ArrayList<>();
         public static List<List<Integer>> subsets(int[] nums) {
-            dfs(new ArrayList<>(),nums,0);
+            dfs(nums,0);
             return res;
         }
-        public static void dfs(List<Integer> path,int[] nums,int i) {
+        public static void dfs(int[] nums,int i) {
             if (i == nums.length) {
                 res.add(new ArrayList<>(path));
                 return;
             }
             path.add(nums[i]);
-            dfs(path, nums, i + 1);
+            dfs(nums, i + 1);
             path.remove(path.size() - 1);
-            dfs(path, nums, i + 1);
+            dfs(nums, i + 1);
         }
     }
 
