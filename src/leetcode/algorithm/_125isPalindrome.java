@@ -4,7 +4,7 @@ package leetcode.algorithm;
 public class _125isPalindrome {
     public static void main(String[] args) {
         System.out.println(MySolution.isPalindrome(" 123A man, a plan, a canal: Panama"));
-    }
+}
 
     static class MySolution {
         static public boolean isPalindrome(String s) {
