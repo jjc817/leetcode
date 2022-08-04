@@ -13,4 +13,16 @@ public class TwoDimensionalArray {
            System.out.println();
        }
    }
+    public static void printArrays(char[][] chars){
+        for (char[] ch : chars) {
+            System.out.print("{");
+            for (int i = 0; i < ch.length; i++) {
+                String s = i == ch.length-1? ch[i]+"":ch[i]+",";
+                System.out.print(s);
+            }
+            System.out.print("}");
+            System.out.println();
+        }
+    }
+
 }
