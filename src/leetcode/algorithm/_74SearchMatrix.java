@@ -13,7 +13,7 @@ public class _74SearchMatrix {
             int right = matrix.length - 1;
             int mid = 0;
             while (left <= right){
-                mid = (left + right) >> 1;
+                mid = (left + right) >>> 1;
                 if(matrix[mid][0] == target)
                     return true;
                 else if (matrix[mid][0]<target)

@@ -5,6 +5,7 @@ public class _91NumDecodings {
         System.out.println(MySolution.numDecodings("11106"));
     }
     static class MySolution {
+
         public static int numDecodings(String s) {
             int n = s.length();
             int[] f = new int[n + 1];
