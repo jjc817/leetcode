@@ -7,7 +7,7 @@ import static leetcode.algorithm._56Merge.Solution.getInts;
 public class _57Insert {
     public static void main(String[] args) {
         int[][] insert = MySolution.insert(new int[][]{{1, 3}, {6, 9}}, new int[]{2, 5});
-        IntArraySolution.printIntArrays(insert);
+        TwoDimensionalArray.printArrays(insert);
     }
     static class MySolution {
         public static int[][] insert(int[][] intervals, int[] newInterval) {

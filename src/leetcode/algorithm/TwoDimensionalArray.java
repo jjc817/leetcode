@@ -1,8 +1,8 @@
 package leetcode.algorithm;
 
-public class IntArraySolution {
+public class TwoDimensionalArray {
 
-   public static void printIntArrays(int[][] intss){
+   public static void printArrays(int[][] intss){
        for (int[] ints : intss) {
            System.out.print("{");
            for (int i = 0; i < ints.length; i++) {
@@ -13,5 +13,4 @@ public class IntArraySolution {
            System.out.println();
        }
    }
-
 }

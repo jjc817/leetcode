@@ -1,5 +1,5 @@
 package leetcode.algorithm;
-
+//
 public class _91NumDecodings {
     public static void main(String[] args) {
         System.out.println(MySolution.numDecodings("11106"));

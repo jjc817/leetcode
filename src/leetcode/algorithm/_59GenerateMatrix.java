@@ -1,12 +1,9 @@
 package leetcode.algorithm;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class _59GenerateMatrix {//54相似
     public static void main(String[] args) {
         final int[][] integers = MySolution.spiralOrder(10);
-        IntArraySolution.printIntArrays(integers);
+        TwoDimensionalArray.printArrays(integers);
     }
     static class MySolution {
         public static int[][] spiralOrder(int n) {
