@@ -90,4 +90,31 @@ public class ListNode {
         }
         return new ListNode[]{tail, head};
     }
+
+    public static ListNode reverse(ListNode head) {
+        ListNode first = head;
+        ListNode last = ListNode.last(head);
+        while (first!=last){
+            ListNode p = first;
+            first = first.next;
+            p.next = last.next;
+            last.next=p;
+        }
+        return first;
+    }
+    public static ListNode mid(ListNode head) {
+        int length = length(head);
+        for (int i = 0; i < length / 2 + length % 2 - 1; i++) {
+            head = head.next;
+        }
+        return head;
+    }
+    public static ListNode last(ListNode head){
+          if (head == null)
+              return null;
+          while (head.next != null){
+              head = head.next;
+          }
+          return head;
+    }
 }
