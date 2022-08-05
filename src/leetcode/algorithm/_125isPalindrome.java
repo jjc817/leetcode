@@ -22,15 +22,7 @@ public class _125isPalindrome {
                     s = s.replace(s.charAt(i), (char) (s.charAt(i) +32));
                 }
             }
-            int l = 0, r = s.length() - 1;
-            while (l < r){
-                if(s.charAt(l) != s.charAt(r)){
-                    return false;
-                }
-                l++;
-                r--;
-            }
-            return true;
+           return Palindrome.check(s);
         }
         static public boolean isUpper(char c){
             return c >= 'A' && c <= 'Z';
