@@ -6,7 +6,7 @@ import java.util.List;
 public class _139wordBreak {
     public static void main(String[] args) {
         List<String> word = new ArrayList<>();
-        word.add("let");
+        word.add("leet");
         word.add("code");
         System.out.println(MySolution.wordBreak("leetcode", word));
     }
