@@ -103,6 +103,14 @@ public class ListNode {
         return first;
     }
     public static ListNode mid(ListNode head) {
+        ListNode mid = head;
+        while (head.next !=null && head.next.next != null){
+            head = head.next.next;
+            mid=mid.next;
+        }
+        return mid;
+    }
+    public static ListNode mid2(ListNode head) {
         int length = length(head);
         for (int i = 0; i < length / 2 + length % 2 - 1; i++) {
             head = head.next;
