@@ -3,6 +3,7 @@ package leetcode.algorithm;
 public class QuickSort {
     public static void main(String[] args) {
         int[] nums = new int[]{7,4,6,2,3,8,1,9,5};
+        InsertionSort.iSort(nums);
         quickSort(0,nums.length - 1,nums);
         quickSort(nums,0,nums.length - 1);
     }
