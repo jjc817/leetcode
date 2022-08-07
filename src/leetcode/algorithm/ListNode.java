@@ -68,29 +68,6 @@ public class ListNode {
         return len;
     }
 
-    public static ListNode prev(ListNode head,ListNode target){
-
-        while (head.next!=null){
-            if(head.next==target){
-                return head;
-            }
-            head=head.next;
-
-        }
-        return null;
-    }
-    public static ListNode[] myReverse(ListNode head, ListNode tail) {
-        ListNode prev = tail.next;
-        ListNode p = head;
-        while (prev != tail) {
-            ListNode nex = p.next;
-            p.next = prev;
-            prev = p;
-            p = nex;
-        }
-        return new ListNode[]{tail, head};
-    }
-
     public static ListNode reverse(ListNode head) {
         ListNode first = head;
         ListNode last = ListNode.last(head);
@@ -110,13 +87,7 @@ public class ListNode {
         }
         return mid;
     }
-    public static ListNode mid2(ListNode head) {
-        int length = length(head);
-        for (int i = 0; i < length / 2 + length % 2 - 1; i++) {
-            head = head.next;
-        }
-        return head;
-    }
+
     public static ListNode last(ListNode head){
           if (head == null)
               return null;

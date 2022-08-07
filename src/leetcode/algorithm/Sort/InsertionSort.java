@@ -1,4 +1,4 @@
-package leetcode.algorithm;
+package leetcode.algorithm.Sort;
 
 public class InsertionSort {
     public static void iSort(int [] arr){

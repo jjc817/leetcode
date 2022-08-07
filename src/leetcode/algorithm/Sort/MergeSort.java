@@ -1,4 +1,4 @@
-package leetcode.algorithm;
+package leetcode.algorithm.Sort;
 
 public class MergeSort {
     public static void mSort(int[] arr){
@@ -49,7 +49,7 @@ public class MergeSort {
             arr[k] = result[k];
     }
 
-    public static void msort(int[] arr,int len) {
-        merge_sort_recursive(arr, new int[len], 0, len - 1);
+    public static void mSortRecursive(int[] arr) {
+        merge_sort_recursive(arr, new int[arr.length], 0, arr.length - 1);
     }
 }

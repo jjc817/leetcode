@@ -1,15 +1,11 @@
-package leetcode.algorithm;
+package leetcode.algorithm.Sort;
+
+
+import static leetcode.algorithm.Sort.SortTest.swap;
 
 public class QuickSort {
-    public static void main(String[] args) {
-        int[] nums = new int[]{7,4,6,2,3,8,1,9,5};
-        //InsertionSort.iSort(nums);
-        MergeSort.msort(nums, nums.length);
-        quickSort(0,nums.length - 1,nums);
-        quickSort(nums,0,nums.length - 1);
-    }
     //單邊
-    static public void quickSort(int start,int end,int[] nums){
+    static public void qSort(int start,int end,int[] nums){
         if (end - start < 1){
             return;
         }
@@ -20,11 +16,11 @@ public class QuickSort {
             }
         }
         swap(nums,start,end);
-        quickSort(0,start - 1,nums);
-        quickSort(start + 1,end,nums);
+        qSort(0,start - 1,nums);
+        qSort(start + 1,end,nums);
     }
     //雙邊
-    static public void quickSort(int[] nums,int left,int right){
+    static public void qSort(int[] nums,int left,int right){
         if (right - left < 1){
             return;
         }
@@ -40,12 +36,8 @@ public class QuickSort {
             swap(nums,left,right);
         }
         swap(nums,start,left);
-        quickSort(nums,start,left - 1);
-        quickSort(nums,left + 1,end);
+        qSort(nums,start,left - 1);
+        qSort(nums,left + 1,end);
     }
-    static public void swap(int[] nums,int i,int j){
-        int temp = nums[i];
-        nums[i] = nums[j];
-        nums[j] = temp;
-    }
+
 }

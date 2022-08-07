@@ -1,5 +1,6 @@
 package leetcode.algorithm;
 
+
 public class _25ReverseKGroup {
     public static void main(String[] args) {
         ListNode listNode = ListNode.createByListWithoutHead(new int[]{1,2,3,4,5});
@@ -21,7 +22,7 @@ public class _25ReverseKGroup {
                     }
                 }
                 ListNode nex = tail.next;
-                ListNode[] reverse = ListNode.myReverse(head, tail);
+                ListNode[] reverse = myReverse(head, tail);
                 head = reverse[0];
                 tail = reverse[1];
                 // 把子链表重新接回原链表
@@ -30,34 +31,18 @@ public class _25ReverseKGroup {
                 pre = tail;
                 head = tail.next;
             }
-
             return hair.next;
         }
-        static class MySolution {
-            public static ListNode reverseKGroup(ListNode head, int k) {
-                ListNode h = head;
-                while (ListNode.length(h)>=k){
-                    ListNode last = h;
-                    ListNode first = h;
-                    for (int i = 0; i < k-1; i++) {
-                        last=last.next;
-                    }
-                    for (int i = 0; i < k/2; i++) {
-                        int temp = first.val;
-                        first.val=last.val;
-                        last.val=temp;
-                        first=first.next;
-                        last=ListNode.prev(head,last);
-                    }
-                    for (int i = 0; i < k; i++) {
-                        h=h.next;
-                    }
-                }
-                return head;
+        public static ListNode[] myReverse(ListNode head, ListNode tail) {
+            ListNode prev = tail.next;
+            ListNode p = head;
+            while (prev != tail) {
+                ListNode nex = p.next;
+                p.next = prev;
+                prev = p;
+                p = nex;
             }
+            return new ListNode[]{tail, head};
         }
-
-
     }
-
 }
