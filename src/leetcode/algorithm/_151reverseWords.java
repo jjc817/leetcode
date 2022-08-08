@@ -4,7 +4,7 @@ import java.util.*;
 
 public class _151reverseWords {
     public static void main(String[] args) {
-        System.out.println(MySolution.reverseWords("the sky is blue"));
+        System.out.println(_151reverseWords.MySolution.reverseWords("the sky is blue"));
     }
    static class MySolution {
         public static String reverseWords(String s) {
